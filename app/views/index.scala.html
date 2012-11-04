@@ -8,6 +8,7 @@
     The n-queens problem: Given a n X n chess-board, place n queens such that no queen is in check from any other (a queen can check another piece if they are on the same column, row, or diagonal).
   </p>
     
+  <p>n =</p>
   @helper.form(action = routes.Application.show, 'class -> "form-inline") {
     <select class="span1" name="num">
       <option>4</option>
@@ -18,7 +19,7 @@
       <option>9</option>
       <option>10</option>
     </select>
-    <input type="submit" value="Submit" class="btn btn-primary"/>
+    <input type="submit" value="Solve" class="btn btn-primary"/>
   }
     
 }
