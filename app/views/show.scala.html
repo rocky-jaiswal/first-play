@@ -1,21 +1,21 @@
-@(num: Int, queens: List[List[(Int, Int)]])
+@(num: List[Int], queens: List[List[(Int, Int)]])
 
-@main("First-Play App") {
+@main("n-queens problem") {
   
   <h1>Solutions</h1>
-
-  @queens.map { solutions =>
-    <div id="solution" style="margin-bottom: 20px;">
-      <ui>
-        @solutions.map { solution =>
-          <li>
-            @solution
-          </li>
-        }
-      </ui>
-    </div>
-  }
-
   <a href="/" class="btn btn-inverse">Back</a>
+  <hr/>
+  @queens.map { solution =>
+    <h3>Solution</h3>
+    <table class="table table-bordered tables-striped">
+      @num.map { yy => 
+        <tr>
+          @num.map { xx =>
+            <td @if(solution.contains((yy,xx))){class=occupied}>&nbsp;</td> 
+          }
+        </tr>
+      }
+    </table>
+  }
 
 }

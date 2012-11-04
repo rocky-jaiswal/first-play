@@ -21,7 +21,7 @@ object Application extends Controller {
   def show = Action { implicit request => {
       val num = myForm.bindFromRequest.get
       val queens = Solver.queens(num)
-      Ok(views.html.show(num, queens))
+      Ok(views.html.show((1 to num).toList, queens))
     }
   }
   
