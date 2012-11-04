@@ -1,0 +1,21 @@
+@(num: Int, queens: List[List[(Int, Int)]])
+
+@main("First-Play App") {
+  
+  <h1>Solutions</h1>
+
+  @queens.map { solutions =>
+    <div id="solution" style="margin-bottom: 20px;">
+      <ui>
+        @solutions.map { solution =>
+          <li>
+            @solution
+          </li>
+        }
+      </ui>
+    </div>
+  }
+
+  <a href="/" class="btn btn-inverse">Back</a>
+
+}

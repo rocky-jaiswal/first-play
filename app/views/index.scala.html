@@ -1,0 +1,10 @@
+@(myForm: Form[Int])
+
+@main("First-Play App") {
+    
+  @helper.form(action = routes.Application.show, 'class -> "form-inline") {
+    <input type="text" class="input-small" name="num" placeholder="Number">
+    <input type="submit" value="Submit" class="btn btn-primary"/>
+  }
+    
+}
