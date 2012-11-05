@@ -1,3 +1,11 @@
 .occupied {
   background-color: #CCCCCC !important;
 }
+
+.small {
+  width: 25% !important;
+}
+
+.table td {
+  padding-top: 20px;
+}

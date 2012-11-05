@@ -2,20 +2,22 @@
 
 @main("n-queens problem") {
   
-  <h1>Solutions</h1>
+  <h1>@queens.size Solutions Found</h1>
   <a href="/" class="btn btn-inverse">Back</a>
   <hr/>
-  @queens.map { solution =>
-    <h3>Solution</h3>
-    <table class="table table-bordered tables-striped">
-      @num.map { yy => 
-        <tr>
-          @num.map { xx =>
-            <td @if(solution.contains((yy,xx))){class=occupied}>&nbsp;</td> 
+    @queens.map { solution =>
+      <h3>Solution</h3>
+      <div class="small">
+        <table class="table table-bordered tables-striped">
+          @num.map { yy => 
+            <tr>
+              @num.map { xx =>
+                <td @if(solution.contains((yy,xx))){class=occupied}>&nbsp;</td> 
+              }
+            </tr>
           }
-        </tr>
-      }
-    </table>
+        </table>
+      </div>
   }
 
 }
